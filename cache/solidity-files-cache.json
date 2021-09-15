@@ -1,0 +1,44 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/arcticwolf/Documents/Smartcontrats/catoshi/contracts/Catoshi.sol": {
+      "lastModificationDate": 1621965260426,
+      "contentHash": "13a07be50dd7b37e33b53c6df119aa3a",
+      "sourceName": "contracts/Catoshi.sol",
+      "solcConfig": {
+        "version": "0.6.2",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 9999
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.6.2"
+      ],
+      "artifacts": [
+        "Address",
+        "Catoshi",
+        "Context",
+        "IERC20",
+        "Ownable",
+        "SafeMath"
+      ]
+    }
+  }
+}

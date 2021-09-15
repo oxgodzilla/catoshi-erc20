@@ -1,0 +1,2167 @@
+{
+  "version": "3.2",
+  "log": [
+    {
+      "Address": {
+        "src": "contracts/Catoshi.sol:24",
+        "version": {
+          "withMetadata": "b2436ea2eb3a496fa070c7a324f752c130efe273cf48ad7224aa4ab9479d7409",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Catoshi": {
+        "src": "contracts/Catoshi.sol:137",
+        "version": {
+          "withMetadata": "7e5312a09ed04035e933a22e9c09120c02813ae464c7784e30f3226fdafce684",
+          "withoutMetadata": "7e5312a09ed04035e933a22e9c09120c02813ae464c7784e30f3226fdafce684",
+          "linkedWithoutMetadata": "7e5312a09ed04035e933a22e9c09120c02813ae464c7784e30f3226fdafce684"
+        },
+        "inherit": [
+          "Ownable",
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [
+          "SafeMath",
+          "Address"
+        ],
+        "methods": [
+          "(string,string)",
+          "name()",
+          "symbol()",
+          "decimals()",
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)",
+          "increaseAllowance(address,uint256)",
+          "decreaseAllowance(address,uint256)",
+          "isExcluded(address)",
+          "totalFees()",
+          "burnOf(uint256)",
+          "reflect(uint256)",
+          "reflectionFromToken(uint256,bool)",
+          "tokenFromReflection(uint256)",
+          "excludeAccount(address)",
+          "includeAccount(address)",
+          "getMinute(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Catoshi",
+            "src": "contracts/Catoshi.sol:167"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "_decimals",
+            "src": "contracts/Catoshi.sol:143"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "_charityWallet",
+            "src": "contracts/Catoshi.sol:159"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Catoshi",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "contracts/Catoshi.sol:141"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "contracts/Catoshi.sol:142"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_decimals",
+              "type": "t_uint8",
+              "src": "contracts/Catoshi.sol:143"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_rOwned",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/Catoshi.sol:145"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_tOwned",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/Catoshi.sol:146"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "contracts/Catoshi.sol:147"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_isExcluded",
+              "type": "t_mapping(t_address,t_bool)",
+              "src": "contracts/Catoshi.sol:149"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_excluded",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/Catoshi.sol:150"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_tTotal",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:154"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_rTotal",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:155"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_tFeeTotal",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:156"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_charityWallet",
+              "type": "t_address",
+              "src": "contracts/Catoshi.sol:159"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_MAX_TX_SIZE",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:162"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "curTime",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:164"
+            }
+          ],
+          "types": {
+            "t_string_storage": {
+              "label": "string"
+            },
+            "t_uint8": {
+              "label": "uint8"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "src": "contracts/Catoshi.sol:34",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "src": "contracts/Catoshi.sol:8",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Ownable": {
+        "src": "contracts/Catoshi.sol:85",
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "()",
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Ownable",
+            "src": "contracts/Catoshi.sol:93"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Ownable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "contracts/Catoshi.sol:86"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeMath": {
+        "src": "contracts/Catoshi.sol:42",
+        "version": {
+          "withMetadata": "92b1d8443fe0c8c9d4b1c9b6b61b2f88e4d8255a8943b2cc14cf61f47d26ce14",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "Address": {
+        "src": "contracts/Catoshi.sol:24",
+        "version": {
+          "withMetadata": "b2436ea2eb3a496fa070c7a324f752c130efe273cf48ad7224aa4ab9479d7409",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Catoshi": {
+        "src": "contracts/Catoshi.sol:137",
+        "version": {
+          "withMetadata": "7e5312a09ed04035e933a22e9c09120c02813ae464c7784e30f3226fdafce684",
+          "withoutMetadata": "7e5312a09ed04035e933a22e9c09120c02813ae464c7784e30f3226fdafce684",
+          "linkedWithoutMetadata": "7e5312a09ed04035e933a22e9c09120c02813ae464c7784e30f3226fdafce684"
+        },
+        "inherit": [
+          "Ownable",
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [
+          "SafeMath",
+          "Address"
+        ],
+        "methods": [
+          "(string,string)",
+          "name()",
+          "symbol()",
+          "decimals()",
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)",
+          "increaseAllowance(address,uint256)",
+          "decreaseAllowance(address,uint256)",
+          "isExcluded(address)",
+          "totalFees()",
+          "burnOf(uint256)",
+          "reflect(uint256)",
+          "reflectionFromToken(uint256,bool)",
+          "tokenFromReflection(uint256)",
+          "excludeAccount(address)",
+          "includeAccount(address)",
+          "getMinute(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Catoshi",
+            "src": "contracts/Catoshi.sol:167"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "_decimals",
+            "src": "contracts/Catoshi.sol:143"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "_charityWallet",
+            "src": "contracts/Catoshi.sol:159"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Catoshi",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "contracts/Catoshi.sol:141"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "contracts/Catoshi.sol:142"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_decimals",
+              "type": "t_uint8",
+              "src": "contracts/Catoshi.sol:143"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_rOwned",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/Catoshi.sol:145"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_tOwned",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/Catoshi.sol:146"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "contracts/Catoshi.sol:147"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_isExcluded",
+              "type": "t_mapping(t_address,t_bool)",
+              "src": "contracts/Catoshi.sol:149"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_excluded",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/Catoshi.sol:150"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_tTotal",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:154"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_rTotal",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:155"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_tFeeTotal",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:156"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_charityWallet",
+              "type": "t_address",
+              "src": "contracts/Catoshi.sol:159"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_MAX_TX_SIZE",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:162"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "curTime",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:164"
+            }
+          ],
+          "types": {
+            "t_string_storage": {
+              "label": "string"
+            },
+            "t_uint8": {
+              "label": "uint8"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "src": "contracts/Catoshi.sol:34",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "src": "contracts/Catoshi.sol:8",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Ownable": {
+        "src": "contracts/Catoshi.sol:85",
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "()",
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Ownable",
+            "src": "contracts/Catoshi.sol:93"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Ownable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "contracts/Catoshi.sol:86"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeMath": {
+        "src": "contracts/Catoshi.sol:42",
+        "version": {
+          "withMetadata": "92b1d8443fe0c8c9d4b1c9b6b61b2f88e4d8255a8943b2cc14cf61f47d26ce14",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "Address": {
+        "src": "contracts/Catoshi.sol:24",
+        "version": {
+          "withMetadata": "b2436ea2eb3a496fa070c7a324f752c130efe273cf48ad7224aa4ab9479d7409",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Catoshi": {
+        "src": "contracts/Catoshi.sol:137",
+        "version": {
+          "withMetadata": "7e5312a09ed04035e933a22e9c09120c02813ae464c7784e30f3226fdafce684",
+          "withoutMetadata": "7e5312a09ed04035e933a22e9c09120c02813ae464c7784e30f3226fdafce684",
+          "linkedWithoutMetadata": "7e5312a09ed04035e933a22e9c09120c02813ae464c7784e30f3226fdafce684"
+        },
+        "inherit": [
+          "Ownable",
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [
+          "SafeMath",
+          "Address"
+        ],
+        "methods": [
+          "(string,string)",
+          "name()",
+          "symbol()",
+          "decimals()",
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)",
+          "increaseAllowance(address,uint256)",
+          "decreaseAllowance(address,uint256)",
+          "isExcluded(address)",
+          "totalFees()",
+          "burnOf(uint256)",
+          "reflect(uint256)",
+          "reflectionFromToken(uint256,bool)",
+          "tokenFromReflection(uint256)",
+          "excludeAccount(address)",
+          "includeAccount(address)",
+          "getMinute(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Catoshi",
+            "src": "contracts/Catoshi.sol:167"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "_decimals",
+            "src": "contracts/Catoshi.sol:143"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "_charityWallet",
+            "src": "contracts/Catoshi.sol:159"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Catoshi",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "contracts/Catoshi.sol:141"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "contracts/Catoshi.sol:142"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_decimals",
+              "type": "t_uint8",
+              "src": "contracts/Catoshi.sol:143"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_rOwned",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/Catoshi.sol:145"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_tOwned",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/Catoshi.sol:146"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "contracts/Catoshi.sol:147"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_isExcluded",
+              "type": "t_mapping(t_address,t_bool)",
+              "src": "contracts/Catoshi.sol:149"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_excluded",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/Catoshi.sol:150"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_tTotal",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:154"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_rTotal",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:155"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_tFeeTotal",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:156"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_charityWallet",
+              "type": "t_address",
+              "src": "contracts/Catoshi.sol:159"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_MAX_TX_SIZE",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:162"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "curTime",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:164"
+            }
+          ],
+          "types": {
+            "t_string_storage": {
+              "label": "string"
+            },
+            "t_uint8": {
+              "label": "uint8"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "src": "contracts/Catoshi.sol:34",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "src": "contracts/Catoshi.sol:8",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Ownable": {
+        "src": "contracts/Catoshi.sol:85",
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "()",
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Ownable",
+            "src": "contracts/Catoshi.sol:93"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Ownable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "contracts/Catoshi.sol:86"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeMath": {
+        "src": "contracts/Catoshi.sol:42",
+        "version": {
+          "withMetadata": "92b1d8443fe0c8c9d4b1c9b6b61b2f88e4d8255a8943b2cc14cf61f47d26ce14",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "Address": {
+        "src": "contracts/Catoshi.sol:24",
+        "version": {
+          "withMetadata": "b2436ea2eb3a496fa070c7a324f752c130efe273cf48ad7224aa4ab9479d7409",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Catoshi": {
+        "src": "contracts/Catoshi.sol:137",
+        "version": {
+          "withMetadata": "7e5312a09ed04035e933a22e9c09120c02813ae464c7784e30f3226fdafce684",
+          "withoutMetadata": "7e5312a09ed04035e933a22e9c09120c02813ae464c7784e30f3226fdafce684",
+          "linkedWithoutMetadata": "7e5312a09ed04035e933a22e9c09120c02813ae464c7784e30f3226fdafce684"
+        },
+        "inherit": [
+          "Ownable",
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [
+          "SafeMath",
+          "Address"
+        ],
+        "methods": [
+          "(string,string)",
+          "name()",
+          "symbol()",
+          "decimals()",
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)",
+          "increaseAllowance(address,uint256)",
+          "decreaseAllowance(address,uint256)",
+          "isExcluded(address)",
+          "totalFees()",
+          "burnOf(uint256)",
+          "reflect(uint256)",
+          "reflectionFromToken(uint256,bool)",
+          "tokenFromReflection(uint256)",
+          "excludeAccount(address)",
+          "includeAccount(address)",
+          "getMinute(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Catoshi",
+            "src": "contracts/Catoshi.sol:167"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "_decimals",
+            "src": "contracts/Catoshi.sol:143"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "_charityWallet",
+            "src": "contracts/Catoshi.sol:159"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Catoshi",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "contracts/Catoshi.sol:141"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "contracts/Catoshi.sol:142"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_decimals",
+              "type": "t_uint8",
+              "src": "contracts/Catoshi.sol:143"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_rOwned",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/Catoshi.sol:145"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_tOwned",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/Catoshi.sol:146"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "contracts/Catoshi.sol:147"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_isExcluded",
+              "type": "t_mapping(t_address,t_bool)",
+              "src": "contracts/Catoshi.sol:149"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_excluded",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/Catoshi.sol:150"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_tTotal",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:154"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_rTotal",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:155"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_tFeeTotal",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:156"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_charityWallet",
+              "type": "t_address",
+              "src": "contracts/Catoshi.sol:159"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_MAX_TX_SIZE",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:162"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "curTime",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:164"
+            }
+          ],
+          "types": {
+            "t_string_storage": {
+              "label": "string"
+            },
+            "t_uint8": {
+              "label": "uint8"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "src": "contracts/Catoshi.sol:34",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "src": "contracts/Catoshi.sol:8",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Ownable": {
+        "src": "contracts/Catoshi.sol:85",
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "()",
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Ownable",
+            "src": "contracts/Catoshi.sol:93"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Ownable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "contracts/Catoshi.sol:86"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeMath": {
+        "src": "contracts/Catoshi.sol:42",
+        "version": {
+          "withMetadata": "92b1d8443fe0c8c9d4b1c9b6b61b2f88e4d8255a8943b2cc14cf61f47d26ce14",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "Address": {
+        "src": "contracts/Catoshi.sol:24",
+        "version": {
+          "withMetadata": "1cf2aa0e40eafc3f829e2c20563b28ce9d4302e019a033193f9ce2e381606e57",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Catoshi": {
+        "src": "contracts/Catoshi.sol:137",
+        "version": {
+          "withMetadata": "716095c2345efb15bdee3cc3821aeb4a7ddcf7fdbad5f9e90033475a4e5f4e04",
+          "withoutMetadata": "716095c2345efb15bdee3cc3821aeb4a7ddcf7fdbad5f9e90033475a4e5f4e04",
+          "linkedWithoutMetadata": "716095c2345efb15bdee3cc3821aeb4a7ddcf7fdbad5f9e90033475a4e5f4e04"
+        },
+        "inherit": [
+          "Ownable",
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [
+          "SafeMath",
+          "Address"
+        ],
+        "methods": [
+          "(string,string)",
+          "name()",
+          "symbol()",
+          "decimals()",
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)",
+          "increaseAllowance(address,uint256)",
+          "decreaseAllowance(address,uint256)",
+          "isExcluded(address)",
+          "totalFees()",
+          "burnOf(uint256)",
+          "reflect(uint256)",
+          "reflectionFromToken(uint256,bool)",
+          "tokenFromReflection(uint256)",
+          "excludeAccount(address)",
+          "includeAccount(address)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Catoshi",
+            "src": "contracts/Catoshi.sol:165"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "_decimals",
+            "src": "contracts/Catoshi.sol:143"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "_charityWallet",
+            "src": "contracts/Catoshi.sol:159"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Catoshi",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "contracts/Catoshi.sol:141"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "contracts/Catoshi.sol:142"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_decimals",
+              "type": "t_uint8",
+              "src": "contracts/Catoshi.sol:143"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_rOwned",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/Catoshi.sol:145"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_tOwned",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/Catoshi.sol:146"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "contracts/Catoshi.sol:147"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_isExcluded",
+              "type": "t_mapping(t_address,t_bool)",
+              "src": "contracts/Catoshi.sol:149"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_excluded",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/Catoshi.sol:150"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_tTotal",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:154"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_rTotal",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:155"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_tFeeTotal",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:156"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_charityWallet",
+              "type": "t_address",
+              "src": "contracts/Catoshi.sol:159"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_MAX_TX_SIZE",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:162"
+            }
+          ],
+          "types": {
+            "t_string_storage": {
+              "label": "string"
+            },
+            "t_uint8": {
+              "label": "uint8"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "src": "contracts/Catoshi.sol:34",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "src": "contracts/Catoshi.sol:8",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Ownable": {
+        "src": "contracts/Catoshi.sol:85",
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "()",
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Ownable",
+            "src": "contracts/Catoshi.sol:93"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Ownable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "contracts/Catoshi.sol:86"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeMath": {
+        "src": "contracts/Catoshi.sol:42",
+        "version": {
+          "withMetadata": "25b7b496e4d57c84c59d11fb657b849d395e5b142dcac1624763d3afad8aa1bb",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "Address": {
+        "src": "contracts/Catoshi.sol:24",
+        "version": {
+          "withMetadata": "b3f178e8643ba5b5835963b5b41c53948f7c7e8c91c6c28209a550b221898b75",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Catoshi": {
+        "src": "contracts/Catoshi.sol:137",
+        "version": {
+          "withMetadata": "bfdf7b2199033f37998a1bb118ea67be4a5e16432dfc5c2100bc94bbcda740f0",
+          "withoutMetadata": "bfdf7b2199033f37998a1bb118ea67be4a5e16432dfc5c2100bc94bbcda740f0",
+          "linkedWithoutMetadata": "bfdf7b2199033f37998a1bb118ea67be4a5e16432dfc5c2100bc94bbcda740f0"
+        },
+        "inherit": [
+          "Ownable",
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [
+          "SafeMath",
+          "Address"
+        ],
+        "methods": [
+          "(string,string)",
+          "name()",
+          "symbol()",
+          "decimals()",
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)",
+          "increaseAllowance(address,uint256)",
+          "decreaseAllowance(address,uint256)",
+          "isExcluded(address)",
+          "totalFees()",
+          "burnOf(uint256)",
+          "reflect(uint256)",
+          "reflectionFromToken(uint256,bool)",
+          "tokenFromReflection(uint256)",
+          "excludeAccount(address)",
+          "includeAccount(address)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Catoshi",
+            "src": "contracts/Catoshi.sol:161"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "_decimals",
+            "src": "contracts/Catoshi.sol:143"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "_charityWallet",
+            "src": "contracts/Catoshi.sol:159"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Catoshi",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "contracts/Catoshi.sol:141"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "contracts/Catoshi.sol:142"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_decimals",
+              "type": "t_uint8",
+              "src": "contracts/Catoshi.sol:143"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_rOwned",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/Catoshi.sol:145"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_tOwned",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/Catoshi.sol:146"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "contracts/Catoshi.sol:147"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_isExcluded",
+              "type": "t_mapping(t_address,t_bool)",
+              "src": "contracts/Catoshi.sol:149"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_excluded",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/Catoshi.sol:150"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_tTotal",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:154"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_rTotal",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:155"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_tFeeTotal",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:156"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_charityWallet",
+              "type": "t_address",
+              "src": "contracts/Catoshi.sol:159"
+            }
+          ],
+          "types": {
+            "t_string_storage": {
+              "label": "string"
+            },
+            "t_uint8": {
+              "label": "uint8"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "src": "contracts/Catoshi.sol:34",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "src": "contracts/Catoshi.sol:8",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Ownable": {
+        "src": "contracts/Catoshi.sol:85",
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "()",
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Ownable",
+            "src": "contracts/Catoshi.sol:93"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Ownable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "contracts/Catoshi.sol:86"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeMath": {
+        "src": "contracts/Catoshi.sol:42",
+        "version": {
+          "withMetadata": "810d6dc30c9acfbb8073f399a3a484ba4be51185e7cc74a7b1bc78fde9250611",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "Address": {
+        "src": "contracts/Catoshi.sol:24",
+        "version": {
+          "withMetadata": "370590b5bb286e8b0bd7fba7ac8120e332d1214fb6129be1ee5bb8cd46b63248",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Catoshi": {
+        "src": "contracts/Catoshi.sol:137",
+        "version": {
+          "withMetadata": "1620c4d397cd9d363de2c83bf74cecba2c3e3a8268788697c6ebcc44d327f177",
+          "withoutMetadata": "1620c4d397cd9d363de2c83bf74cecba2c3e3a8268788697c6ebcc44d327f177",
+          "linkedWithoutMetadata": "1620c4d397cd9d363de2c83bf74cecba2c3e3a8268788697c6ebcc44d327f177"
+        },
+        "inherit": [
+          "Ownable",
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [
+          "SafeMath",
+          "Address"
+        ],
+        "methods": [
+          "(string,string)",
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)",
+          "increaseAllowance(address,uint256)",
+          "decreaseAllowance(address,uint256)",
+          "isExcluded(address)",
+          "totalFees()",
+          "burnOf(uint256)",
+          "reflect(uint256)",
+          "reflectionFromToken(uint256,bool)",
+          "tokenFromReflection(uint256)",
+          "excludeAccount(address)",
+          "includeAccount(address)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Catoshi",
+            "src": "contracts/Catoshi.sol:157"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "_charityWallet",
+            "src": "contracts/Catoshi.sol:155"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Catoshi",
+              "label": "_rOwned",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/Catoshi.sol:141"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_tOwned",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/Catoshi.sol:142"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "contracts/Catoshi.sol:143"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_isExcluded",
+              "type": "t_mapping(t_address,t_bool)",
+              "src": "contracts/Catoshi.sol:145"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_excluded",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/Catoshi.sol:146"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_tTotal",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:150"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_rTotal",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:151"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_tFeeTotal",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:152"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_charityWallet",
+              "type": "t_address",
+              "src": "contracts/Catoshi.sol:155"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "src": "contracts/Catoshi.sol:34",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "src": "contracts/Catoshi.sol:8",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Ownable": {
+        "src": "contracts/Catoshi.sol:85",
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "()",
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Ownable",
+            "src": "contracts/Catoshi.sol:93"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Ownable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "contracts/Catoshi.sol:86"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeMath": {
+        "src": "contracts/Catoshi.sol:42",
+        "version": {
+          "withMetadata": "8807c8b6807730e922eb959429de34fe9cb63a1f3c03a24ae21e8786d62dce41",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "Address": {
+        "src": "contracts/Catoshi.sol:24",
+        "version": {
+          "withMetadata": "02c13917a2944f13be419689bf152d95bb12a3c9a5882b08ce58a0e16e0b13fd",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Catoshi": {
+        "src": "contracts/Catoshi.sol:137",
+        "version": {
+          "withMetadata": "19c3d89cdd11bf509fd955b4cf23fb3cc3d008cfe9772cdc5ca8c55fe46ebfc7",
+          "withoutMetadata": "19c3d89cdd11bf509fd955b4cf23fb3cc3d008cfe9772cdc5ca8c55fe46ebfc7",
+          "linkedWithoutMetadata": "19c3d89cdd11bf509fd955b4cf23fb3cc3d008cfe9772cdc5ca8c55fe46ebfc7"
+        },
+        "inherit": [
+          "Ownable",
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [
+          "SafeMath",
+          "Address"
+        ],
+        "methods": [
+          "(string,string,uint256)",
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)",
+          "increaseAllowance(address,uint256)",
+          "decreaseAllowance(address,uint256)",
+          "isExcluded(address)",
+          "totalFees()",
+          "burnOf(uint256)",
+          "reflect(uint256)",
+          "reflectionFromToken(uint256,bool)",
+          "tokenFromReflection(uint256)",
+          "excludeAccount(address)",
+          "includeAccount(address)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Catoshi",
+            "src": "contracts/Catoshi.sol:156"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "_charityWallet",
+            "src": "contracts/Catoshi.sol:154"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Catoshi",
+              "label": "_rOwned",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/Catoshi.sol:141"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_tOwned",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/Catoshi.sol:142"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "contracts/Catoshi.sol:143"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_isExcluded",
+              "type": "t_mapping(t_address,t_bool)",
+              "src": "contracts/Catoshi.sol:145"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_excluded",
+              "type": "t_array(t_address)dyn_storage",
+              "src": "contracts/Catoshi.sol:146"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_tTotal",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:149"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_rTotal",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:150"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_tFeeTotal",
+              "type": "t_uint256",
+              "src": "contracts/Catoshi.sol:151"
+            },
+            {
+              "contract": "Catoshi",
+              "label": "_charityWallet",
+              "type": "t_address",
+              "src": "contracts/Catoshi.sol:154"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)"
+            },
+            "t_bool": {
+              "label": "bool"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "src": "contracts/Catoshi.sol:34",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "src": "contracts/Catoshi.sol:8",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Ownable": {
+        "src": "contracts/Catoshi.sol:85",
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "()",
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Ownable",
+            "src": "contracts/Catoshi.sol:93"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Ownable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "contracts/Catoshi.sol:86"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeMath": {
+        "src": "contracts/Catoshi.sol:42",
+        "version": {
+          "withMetadata": "358dc9a755178f5c4f1a616ca9132dce3effd8838778c56307f9961a33cebfb0",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      }
+    }
+  ]
+}
